@@ -1,20 +1,14 @@
-function kalkuleight(arr) {
-  const duplicates = {};
-  let count = 0;
+function kalkuleight(principal, time, rate) {
+  rate = rate / 100;
 
-  // Count occurrences of each element in the array
-  for (const element of arr) {
-    duplicates[element] = (duplicates[element] || 0) + 1;
-  }
+  const amount = principal * Math.pow(1 + rate / frequency, frequency * time);
 
-  // Count the number of elements with more than one occurrence
-  for (const key in duplicates) {
-    if (duplicates[key] > 1) {
-      count++;
-    }
-  }
+  const interest = amount - principal;
 
-  return count;
+  return {
+    amount: amount.toFixed(2),
+    interest: interest.toFixed(2)
+  };
 }
 
 module.exports = { kalkuleight };
