@@ -6,8 +6,8 @@ function kalkuleight(principal, rate, time, frequency) {
   const interest = amount - principal;
 
   return {
-    amount: amount.toFixed(2)
-    // interest: interest.toFixed(2)
+    amount: amount.toFixed(2),
+    interest: interest.toFixed(2)
   };
 }
 
